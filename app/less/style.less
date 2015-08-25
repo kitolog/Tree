@@ -1,0 +1,76 @@
+@import '../../bower_components/bootstrap/less/bootstrap';
+@import '../../bower_components/font-awesome/less/font-awesome';
+@import 'mixins';
+
+@gray-light-lighter: #CCCCCC;
+@grid-float-breakpoint: 1000px;
+@font-family-base: Arial, Helvetica, sans-serif;
+
+/*
+* Font awesome 4 fix
+*/
+
+@icon-font-path : '/assets/font/';
+
+@fa-font-path : '/assets/font';
+@fa-css-prefix: icon;
+
+[class^="@{fa-css-prefix}"] {
+  display: inline-block;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.content {
+
+  padding: 30px 20px;
+
+  .container {
+    .make-xs-column(6);
+    .make-md-column(7);
+    .make-lg-column(8);
+    float: left;
+  }
+
+  .sidebar {
+    .make-xs-column(6);
+    .make-md-column(5);
+    .make-lg-column(4);
+    float: right;
+
+    .tree {
+      li {
+        font-size: 16px;
+
+        -webkit-transition: background-color 2s;
+        transition: background-color 2s;
+
+        &.new {
+          background-color: #fffaa2;
+        }
+
+        a {
+          cursor: pointer;
+          font-size: 20px;
+          padding: 0 10px;
+
+          &.button-remove{
+            .text-danger;
+          }
+
+          &.button-edit{
+            .text-warning;
+          }
+        }
+
+        .tree {
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+}

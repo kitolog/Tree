@@ -1,0 +1,13 @@
+{
+  "name": "Tree",
+  "version": "0.0.1",
+  "private": "true",
+  "dependencies": {
+    "angular": "1.*",
+    "angular-mocks": "1.*",
+    "angular-ui-router": "0.*",
+    "angular-bootstrap":"0.*",
+    "bootstrap": "3.*",
+    "font-awesome": "4.*"
+  }
+}

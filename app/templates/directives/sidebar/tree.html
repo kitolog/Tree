@@ -1,0 +1,10 @@
+<ul class="list-group tree">
+    <li ng-class="{'new':element['isNew']}" ng-repeat="element in treeData.element.elements track by $index"
+        class="list-group-item">
+        <a class="button-remove" ng-click="treeData.showRemoveModal($index, treeData.element)"title="Remove"><i class="icon-trash"></i></a>
+        <span ng-bind="element.name"></span>
+        <a class="button-edit" ng-click="treeData.showEditModal(element)" title="Edit element"><i class="icon icon-cogs"></i></a>
+        <a class="button-add" ng-click="treeData.showAddModal(element)" title="Add child"><i class="icon icon-plus-square"></i></a>
+        <sidebar-tree-directive ng-if="element.elements.length" element="element"></sidebar-tree-directive>
+    </li>
+</ul>

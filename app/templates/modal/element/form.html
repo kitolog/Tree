@@ -1,0 +1,18 @@
+<div class="modal-container">
+    <div class="modal-header">
+        <h3 class="modal-title">Element <span ng-if="modalData.element.name" ng-bind="modalData.element.name"></span></h3>
+    </div>
+    <div class="modal-body">
+        <form>
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input required="required" type="text" ng-model="modalData.element.name" name="name" class="form-control" id="name"
+                       placeholder="Name">
+            </div>
+        </form>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-success" type="button" ng-click="modalData.save()()">Save</button>
+        <button class="btn btn-default" type="button" ng-click="modalData.cancel()">Close</button>
+    </div>
+</div>

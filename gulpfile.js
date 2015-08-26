@@ -10,7 +10,7 @@ var paths = {
     js: ['./app/js/**/*.js']
 };
 
-gulp.task('default', ['styles', 'concatApp', 'concatLib', 'concatTemplates', 'copyIndex', 'copyImages', 'copyFonts']);
+gulp.task('default', ['styles', 'concatApp', 'concatLib', 'compileTemplates', 'copyIndex', 'copyImages', 'copyFonts']);
 
 gulp.task('less', function () {
     return gulp.src(['./app/less/style.less'])
@@ -39,7 +39,7 @@ gulp.task('copyImages', function () {
     ]).pipe(gulp.dest('./wwwroot/assets/img/'))
 });
 
-gulp.task('concatTemplates', function () {
+gulp.task('compileTemplates', function () {
     gulp.src([
         './app/templates/**/*.html'
     ]).pipe(templateCache('templates.js', {

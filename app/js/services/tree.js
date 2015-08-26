@@ -52,9 +52,6 @@ treeServices.factory(
             };
 
             var removeElement = function (index, parent) {
-                console.log('removeElement');
-                console.log(index);
-                console.log(parent);
                 if ((typeof parent == 'undefined') || !parent) {
                     parent = treeData;
                 }

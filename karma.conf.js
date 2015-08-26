@@ -19,7 +19,10 @@ module.exports = function (config) {
             'wwwroot/assets/js/templates.js',
 
             'bower_components/angular-mocks/angular-mocks.js',
-            'tests/*.js'
+
+            'tests/FirstLoad.js',
+            'tests/RootElement.js',
+            'tests/ChildElement.js'
         ],
 
 
@@ -57,7 +60,7 @@ module.exports = function (config) {
         // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
         browsers: [
             'Chrome',
-            //'Firefox'
+            'Firefox'
         ],
 
 

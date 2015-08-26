@@ -6,3 +6,4 @@
 1. npm install
 2. bower install
 3. gulp default
+4. create a new webhost for index.html
